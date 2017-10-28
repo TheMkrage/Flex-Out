@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		7E0B96101FA42644008508DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0B960F1FA42644008508DB /* AppDelegate.swift */; };
-		7E0B96121FA42644008508DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0B96111FA42644008508DB /* ViewController.swift */; };
 		7E0B96151FA42644008508DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E0B96131FA42644008508DB /* Main.storyboard */; };
 		7E0B96171FA42644008508DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E0B96161FA42644008508DB /* Assets.xcassets */; };
 		7E0B961A1FA42644008508DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E0B96181FA42644008508DB /* LaunchScreen.storyboard */; };
+		7E0B96221FA426B8008508DB /* FlexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0B96211FA426B8008508DB /* FlexViewController.swift */; };
+		7E0B96241FA4282F008508DB /* Line.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E0B96231FA4282F008508DB /* Line.png */; };
+		7E0B96261FA42F24008508DB /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0B96251FA42F24008508DB /* UIColorExtension.swift */; };
+		7E0B96281FA43025008508DB /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0B96271FA43025008508DB /* PreferencesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7E0B960C1FA42644008508DB /* Flex Out.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flex Out.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E0B960F1FA42644008508DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7E0B96111FA42644008508DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7E0B96141FA42644008508DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E0B96161FA42644008508DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E0B96191FA42644008508DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E0B961B1FA42644008508DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E0B96211FA426B8008508DB /* FlexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlexViewController.swift; sourceTree = "<group>"; };
+		7E0B96231FA4282F008508DB /* Line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Line.png; sourceTree = "<group>"; };
+		7E0B96251FA42F24008508DB /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		7E0B96271FA43025008508DB /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +61,14 @@
 			isa = PBXGroup;
 			children = (
 				7E0B960F1FA42644008508DB /* AppDelegate.swift */,
-				7E0B96111FA42644008508DB /* ViewController.swift */,
+				7E0B96211FA426B8008508DB /* FlexViewController.swift */,
 				7E0B96131FA42644008508DB /* Main.storyboard */,
+				7E0B96271FA43025008508DB /* PreferencesViewController.swift */,
 				7E0B96161FA42644008508DB /* Assets.xcassets */,
+				7E0B96231FA4282F008508DB /* Line.png */,
 				7E0B96181FA42644008508DB /* LaunchScreen.storyboard */,
 				7E0B961B1FA42644008508DB /* Info.plist */,
+				7E0B96251FA42F24008508DB /* UIColorExtension.swift */,
 			);
 			path = "Flex Out";
 			sourceTree = "<group>";
@@ -126,6 +135,7 @@
 				7E0B961A1FA42644008508DB /* LaunchScreen.storyboard in Resources */,
 				7E0B96171FA42644008508DB /* Assets.xcassets in Resources */,
 				7E0B96151FA42644008508DB /* Main.storyboard in Resources */,
+				7E0B96241FA4282F008508DB /* Line.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E0B96121FA42644008508DB /* ViewController.swift in Sources */,
+				7E0B96221FA426B8008508DB /* FlexViewController.swift in Sources */,
 				7E0B96101FA42644008508DB /* AppDelegate.swift in Sources */,
+				7E0B96261FA42F24008508DB /* UIColorExtension.swift in Sources */,
+				7E0B96281FA43025008508DB /* PreferencesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +289,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2MD9NK2MQ3;
 				INFOPLIST_FILE = "Flex Out/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TheMkrage.Flex-Out";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -292,6 +305,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2MD9NK2MQ3;
 				INFOPLIST_FILE = "Flex Out/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TheMkrage.Flex-Out";
 				PRODUCT_NAME = "$(TARGET_NAME)";
