@@ -81,9 +81,15 @@ struct GetPrefencesStore {
             let jsonDecoder = JSONDecoder()
             print(data.result.value)
             var newOuterArray = [[Item]]()
-            let outerArray = data.result.value
-            for innerArray in outerArray {
-                newOuterArray.
+            let outerArray = data.result.value as? Array<Array<Any>>
+            for innerArray in outerArray! {
+                var newInner = [Item]()
+                for i in innerArray {
+                    var item = Item(price: "0", name: i.name, calories: "0")
+                    item.name = i["name"]
+                    newInner.append(item)
+                }
+                newOuterArray.append(newInner)
             }
             let items = try! jsonDecoder.decode(Array<Array<Item>>.self,from: data.data!)
             callback(items)
