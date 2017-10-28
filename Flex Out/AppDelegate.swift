@@ -13,8 +13,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        UINavigationBar.appearance().tintColor = UIColor(hex: "FF9200")
+        let titleDict: NSDictionary = [NSAttributedStringKey.foregroundColor: UIColor(hex: "FF9200")]
+        UINavigationBar.appearance().titleTextAttributes = titleDict as! [NSAttributedStringKey : Any]
         // Override point for customization after application launch.
         return true
     }
