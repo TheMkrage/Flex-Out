@@ -25,6 +25,9 @@ class FlexViewController: UIViewController, UITableViewDelegate, UITableViewData
             cell.labels[index].text = item.name
             cell.labels[index].isHidden = false
             index = index + 1
+            if index >= 8 {
+                break
+            }
         }
         while index < 8 {
             cell.labels[index].isHidden = true
@@ -42,6 +45,8 @@ class FlexViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.table.dataSource = self
+        self.table.delegate = self
         self.tabBarItem.title = "flex"
         self.navigationItem.title = "f l e x"
         self.view.isUserInteractionEnabled = true
@@ -58,6 +63,10 @@ class FlexViewController: UIViewController, UITableViewDelegate, UITableViewData
     @objc func sendPreferences() {
         GetPrefencesStore.shared.getPreferences(balance: self.priceTextField.text!, isOnlyUsingFavorites: self.isUsingOnlyFavorites) { (itemsList) in
             self.itemsList = itemsList
+            DispatchQueue.main.async {
+                self.view.endEditing(true)
+                self.table.reloadData()
+            }
         }
     }
     

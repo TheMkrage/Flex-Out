@@ -12,7 +12,7 @@ struct ItemRatingStore {
     static var shared = ItemRatingStore()
     private init() { }
     
-    func getLocalPreferences() -> [Preference] {
+    func getLocalPreferences(isFavoritesOnly: Bool) -> [Preference] {
         let userDefaults = UserDefaults.standard
         guard let preferences = userDefaults.dictionary(forKey: "preferences") as? [String: Double] else {
             userDefaults.set([], forKey: "favorites")
@@ -20,8 +20,12 @@ struct ItemRatingStore {
             return []
         }
         var toReturn = [Preference]()
+        
         for (name, preference) in preferences {
-            toReturn.append(Preference(name: name, preference: "\(preference)"))
+            if (isFavoritesOnly && self.getItemRating(with: name).isFavorite ?? false) || (!isFavoritesOnly) {
+                toReturn.append(Preference(name: name, preference: "\(preference)"))
+            }
+            
             
         }
         return toReturn
